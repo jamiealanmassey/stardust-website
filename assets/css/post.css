@@ -1,0 +1,14 @@
+.sd-post-title {
+    font-size: 3em;
+    color: #F1F1F1;
+    text-shadow: 3px 3px 1px #010101;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.sd-post-meta {
+    font-size: 1em;
+    color: #F1F1F1;
+    text-shadow: 3px 3px 3px #010101;
+    margin: 0;
+}

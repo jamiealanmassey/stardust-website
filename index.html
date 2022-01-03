@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="uk-background-cover uk-background-fixed uk-height-large" style="background-color: #010101; filter: blur(30%);"></div>
+<div class="uk-background-cover uk-background-fixed uk-height-large" style="background-image: url({{site.baseurl}}/assets/img/banner/banner-02.png); filter: blur(30%);"></div>
 <div class="uk-background-image" style="background-image: linear-gradient(transparent, #F1F1F1), url({{site.baseurl}}/assets/img/tile/ziggy-tile.png);" id="video-container">
     <div class="uk-container sd-offset-video" uk-height-match=".sd-video-main">
         <video class="uk-align-center uk-width-1-1 sd-video-main sd-outline sd-shadow-sm" style="filter: brightness(70%);" src="{{site.baseurl}}/assets/video/demo-gameplay.mp4" autoplay loop muted playsinline uk-video></video>
@@ -38,11 +38,14 @@ document.getElementById("video-container").style.height = video_parent_height;
 <div class="uk-container">
     <!--<h2 class="uk-text-uppercase uk-text-bold uk-text-muted uk-padding sd-spacing" uk-scrollspy="cls:uk-animation-slide-top">Fresh From The Blog</h2>-->
     <div class="uk-child-width-expand@m uk-margin-auto" uk-grid>
+        {% assign announcement = site.categories.announcements[0] %}
+        {% if announcement %}
         <a class="uk-margin-remove sd-underline-none sd-panel-container" href="#">
             <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
                 <div class="uk-margin" uk-grid>
                     <div class="uk-width-auto uk-height-small uk-padding-remove-left">
-                        <img data-src="https://cdn.vox-cdn.com/thumbor/l8Q4uVQfBoSFGqcezN2QGg1ZEO4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10817765/acastro_180509_1777_steam_0001.jpg" width="150px" alt="" uk-img>
+                        <img data-src="{{announcement.url_thumbnail}}" width="150px" alt="" uk-img>
+                        <!--<img data-src="https://cdn.vox-cdn.com/thumbor/l8Q4uVQfBoSFGqcezN2QGg1ZEO4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10817765/acastro_180509_1777_steam_0001.jpg" width="150px" alt="" uk-img>-->
                     </div>
                     <div class="uk-width-expand">
                         <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> Announcements</h6>
@@ -51,8 +54,27 @@ document.getElementById("video-container").style.height = video_parent_height;
                 </div>
             </div>
         </a>
+        {% endif %}
 
-        <a class="sd-underline-none sd-panel-container" href="#">
+
+        {% assign devlog = site.categories.devlog[0] %}
+        {% if devlog %}
+        <a class="uk-margin-remove sd-underline-none sd-panel-container" href="#">
+            <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
+                <div class="uk-margin" uk-grid>
+                    <div class="uk-width-auto uk-height-small uk-padding-remove-left">
+                        <img data-src="{{devlog.url_thumbnail}}" width="150px" alt="" uk-img>
+                        <!--<img data-src="https://cdn.vox-cdn.com/thumbor/l8Q4uVQfBoSFGqcezN2QGg1ZEO4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10817765/acastro_180509_1777_steam_0001.jpg" width="150px" alt="" uk-img>-->
+                    </div>
+                    <div class="uk-width-expand">
+                        <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> Announcements</h6>
+                        <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">UPCOMING: Steam Next Fest (February 2022)</h4>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endif %}
+        <!--<a class="sd-underline-none sd-panel-container" href="#">
             <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
                 <div class="uk-margin" uk-grid>
                     <div class="uk-width-auto uk-height-small uk-padding-remove-left">
@@ -64,7 +86,7 @@ document.getElementById("video-container").style.height = video_parent_height;
                     </div>
                 </div>
             </div>
-        </a>
+        </a>-->
     </div>
 </div>
 
