@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="uk-background-cover uk-background-fixed uk-height-large" style="background-color: #010101; filter: blur(30%);"></div>
-<div class="uk-background-image" style="background-image: linear-gradient(transparent, #F1F1F1), url(assets/img/tile/ziggy-tile.png);" id="video-container">
+<div class="uk-background-image" style="background-image: linear-gradient(transparent, #F1F1F1), url({{site.baseurl}}/assets/img/tile/ziggy-tile.png);" id="video-container">
     <div class="uk-container sd-offset-video" uk-height-match=".sd-video-main">
-        <video class="uk-align-center uk-width-1-1 sd-video-main sd-outline sd-shadow-sm" style="filter: brightness(70%);" src="/assets/video/demo-gameplay.mp4" autoplay loop muted playsinline uk-video></video>
+        <video class="uk-align-center uk-width-1-1 sd-video-main sd-outline sd-shadow-sm" style="filter: brightness(70%);" src="{{site.baseurl}}/assets/video/demo-gameplay.mp4" autoplay loop muted playsinline uk-video></video>
         <div class="uk-overlay uk-position-center">
             <div class="uk-flex uk-flex-center uk-flex-middle">
                 <img class="uk-width-2-3 uk-width-1-2@m uk-margin" data-src="{{site.baseurl}}/assets/img/ziggy-logo.png" alt="" uk-img>
@@ -14,13 +14,13 @@ layout: default
         <div class="uk-overlay uk-position-bottom uk-width-1-1 uk-animation-fade">
             <div class="uk-flex uk-flex-center uk-flex-middle uk-padding">
                 <a class="uk-button sd-button uk-width-1-6@l uk-width-1-5@m uk-width-1-4@s uk-width-1-1" href="https://store.steampowered.com/app/1501820/Ziggys_Cosmic_Adventures/">
-                    <img class="uk-animation-slide-bottom" data-src="/assets/img/storefront-steam.svg" alt="" uk-img>
+                    <img class="uk-animation-slide-bottom" data-src="{{site.baseurl}}/assets/img/storefront-steam.svg" alt="" uk-img>
                 </a>
                 <a class="uk-button sd-button uk-width-1-6@l uk-width-1-5@m uk-width-1-4@s uk-width-1-1" href="#">
-                    <img class="uk-animation-slide-bottom" data-src="/assets/img/storefront-viveport.svg" alt="" uk-img>
+                    <img class="uk-animation-slide-bottom" data-src="{{site.baseurl}}/assets/img/storefront-viveport.svg" alt="" uk-img>
                 </a>
                 <a class="uk-button sd-button uk-width-1-6@l uk-width-1-5@m uk-width-1-4@s uk-width-1-1" href="https://www.oculus.com/experiences/quest/">
-                    <img class="uk-animation-slide-bottom" data-src="/assets/img/storefront-meta.svg" alt="" uk-img>
+                    <img class="uk-animation-slide-bottom" data-src="{{site.baseurl}}/assets/img/storefront-meta.svg" alt="" uk-img>
                 </a>
             </div>
         </div>
@@ -56,7 +56,7 @@ document.getElementById("video-container").style.height = video_parent_height;
             <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
                 <div class="uk-margin" uk-grid>
                     <div class="uk-width-auto uk-height-small uk-padding-remove-left">
-                        <img data-src="/assets/img/thumbs/thumb_ziggy.png" width="150px" alt="" uk-img>
+                        <img data-src="{{site.baseurl}}/assets/img/thumbs/thumb_ziggy.png" width="150px" alt="" uk-img>
                     </div>
                     <div class="uk-width-expand">
                         <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> Devlogs</h6>
@@ -169,7 +169,7 @@ document.getElementById("video-container").style.height = video_parent_height;
 </div>
 
 
-<div class="uk-height-small" style="background-image: linear-gradient(#F1F1F1, transparent), url(assets/img/tile/ziggy-tile.png);"></div>
+<div class="uk-height-small" style="background-image: linear-gradient(#F1F1F1, transparent), url({{site.baseurl}}/assets/img/tile/ziggy-tile.png);"></div>
 
 <a href="#" uk-scroll class="uk-flex uk-flex-center">
     <span uk-icon="icon: triangle-up;ratio: 3" style="color: #010101;"></span>
