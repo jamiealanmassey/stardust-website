@@ -18,13 +18,13 @@
             </div>
         </div>
         
-        <div class="uk-container uk-margin"uk-height-viewport="expand: true">
+        <div class="uk-container uk-margin" uk-height-viewport="expand: true">
             {% if page.title_sub %}
             <div class="uk-padding-small uk-width-1-1 sd-text-white sd-background-1 sd-outline">
-                <div class="uk-margin-medium-left">{{page.title_sub}}</div>
+                <div class="uk-margin-medium-left"><span class="uk-margin-small-right" uk-icon="icon: info; ratio: 1.25;"></span> {{page.title_sub}}</div>
             </div>
             {% endif %}
-            <a href="{{site.baseurl}}/news.html" class="uk-button uk-padding-remove-left uk-margin-small-top">
+            <a href="{{site.baseurl}}/news" class="uk-button uk-padding-remove-left uk-margin-small-top">
                 <span uk-icon="icon: arrow-left; ratio: 1.5;"></span> Back to news index
             </a>
             <div class="uk-margin-medium-top uk-margin-large-bottom uk-padding">

@@ -4,6 +4,14 @@ html {
     overflow-x: hidden;
 }
 
+.sd-heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.15cm;
+    text-shadow: 2px 2px 2px #20202079;
+}
+
 .sd-text-white,
 .sd-text-white:hover { 
     color: #F1F1F1; 
@@ -146,33 +154,23 @@ html {
     border-color: grey;
 }
 
-
-/*.sd-button {
-    position: relative;
-    color: #FFF;
+.pagination a, .pagination span {
+    padding: 7px 18px;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: #F1F1F1;
+    display: inline-block;
     text-decoration: none;
-    padding: 12px 8px;
-}
+    color: 57c28b;
+  }
 
-.sd-button:hover {
-    color: #FFF;
-    text-decoration: none;
-}
+.pagination a {    
+    &:hover {
+        background-color: #f1f1f1;
+        color: #57c28b;
+    }
+ }
 
-.sd-button::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #FFF;
-    border-radius: 25px;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.sd-button:hover::before {
-    transform: scaleX(1);
-}*/
+.pagination {
+    text-align: center;
+ }

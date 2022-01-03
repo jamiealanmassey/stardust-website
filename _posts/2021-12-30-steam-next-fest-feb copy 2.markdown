@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Welcome to Jekyll!"
-title_sub: "Some kind of subtitle"
+title: "Some kind of devlog"
+title_sub: "The fest with the best!"
 author: "Jamie Massey"
-date: 2021-12-29 01:00:25 +0000
-url_thumbnail: "https://cdn.vox-cdn.com/thumbor/l8Q4uVQfBoSFGqcezN2QGg1ZEO4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10817765/acastro_180509_1777_steam_0001.jpg"
-url_banner: "assets/img/banner/banner-02.png"
-categories: announcements
+date: 2021-12-30 01:00:25 +0000
+url_thumbnail: "assets/img/thumbs/thumb-ziggy-01.png"
+url_banner: "assets/img/banner/banner-01.png"
+categories: devlog
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

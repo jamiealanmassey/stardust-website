@@ -37,56 +37,40 @@ document.getElementById("video-container").style.height = video_parent_height;
 
 <div class="uk-container">
     <!--<h2 class="uk-text-uppercase uk-text-bold uk-text-muted uk-padding sd-spacing" uk-scrollspy="cls:uk-animation-slide-top">Fresh From The Blog</h2>-->
-    <div class="uk-child-width-expand@m uk-margin-auto" uk-grid>
+    <div class="uk-child-width-expand@l uk-margin-auto" uk-grid>
         {% assign announcement = site.categories.announcements[0] %}
         {% if announcement %}
-        <a class="uk-margin-remove sd-underline-none sd-panel-container" href="#">
+        <a class="uk-margin-remove sd-underline-none sd-panel-container" href="{{site.baseurl}}{{announcement.url}}">
             <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
                 <div class="uk-margin" uk-grid>
                     <div class="uk-width-auto uk-height-small uk-padding-remove-left">
-                        <img data-src="{{announcement.url_thumbnail}}" width="150px" alt="" uk-img>
-                        <!--<img data-src="https://cdn.vox-cdn.com/thumbor/l8Q4uVQfBoSFGqcezN2QGg1ZEO4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10817765/acastro_180509_1777_steam_0001.jpg" width="150px" alt="" uk-img>-->
+                        <img data-src="{{site.baseurl}}/{{announcement.url_thumbnail}}" width="150px" alt="" uk-img>
                     </div>
-                    <div class="uk-width-expand">
-                        <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> Announcements</h6>
-                        <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">UPCOMING: Steam Next Fest (February 2022)</h4>
+                    <div class="uk-width-expand" style="background-image: linear-gradient(to left, transparent,  #010101), url({{site.baseurl}}/{{post.url_banner}});">
+                        <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> {{announcement.categories[0]}}</h6>
+                        <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">{{announcement.title}}</span></h4>
                     </div>
                 </div>
             </div>
         </a>
         {% endif %}
-
 
         {% assign devlog = site.categories.devlog[0] %}
         {% if devlog %}
-        <a class="uk-margin-remove sd-underline-none sd-panel-container" href="#">
+        <a class="uk-margin-remove sd-underline-none sd-panel-container" href="{{site.baseurl}}{{devlog.url}}">
             <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
                 <div class="uk-margin" uk-grid>
                     <div class="uk-width-auto uk-height-small uk-padding-remove-left">
-                        <img data-src="{{devlog.url_thumbnail}}" width="150px" alt="" uk-img>
-                        <!--<img data-src="https://cdn.vox-cdn.com/thumbor/l8Q4uVQfBoSFGqcezN2QGg1ZEO4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10817765/acastro_180509_1777_steam_0001.jpg" width="150px" alt="" uk-img>-->
+                        <img data-src="{{site.baseurl}}/{{devlog.url_thumbnail}}" width="150px" alt="" uk-img>
                     </div>
-                    <div class="uk-width-expand">
-                        <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> Announcements</h6>
-                        <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">UPCOMING: Steam Next Fest (February 2022)</h4>
+                    <div class="uk-width-expand" style="background-image: linear-gradient(to left, transparent,  #010101), url({{site.baseurl}}/{{post.url_banner}});">
+                        <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> {{devlog.categories[0]}}</h6>
+                        <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">{{devlog.title}}</span></h4>
                     </div>
                 </div>
             </div>
         </a>
         {% endif %}
-        <!--<a class="sd-underline-none sd-panel-container" href="#">
-            <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
-                <div class="uk-margin" uk-grid>
-                    <div class="uk-width-auto uk-height-small uk-padding-remove-left">
-                        <img data-src="{{site.baseurl}}/assets/img/thumbs/thumb_ziggy.png" width="150px" alt="" uk-img>
-                    </div>
-                    <div class="uk-width-expand">
-                        <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> Devlogs</h6>
-                        <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">how we did it: the making of ziggy</h4>
-                    </div>
-                </div>
-            </div>
-        </a>-->
     </div>
 </div>
 

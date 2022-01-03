@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="uk-container uk-margin-large-top" uk-height-viewport="expand: true">
+    <h1 class="uk-margin-remove sd-heading">Most Recent Posts ({{paginator.page}})</h1>
+    <hr class="uk-divider-small">
+    <div class="uk-child-width-1-1" uk-grid>
+        {% for post in paginator.posts %}
+            <a class="uk-margin-remove sd-underline-none sd-panel-container" href="{{site.baseurl}}{{post.url}}">
+                <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
+                    <div class="uk-margin" uk-grid>
+                        <div class="uk-width-auto uk-height-small uk-padding-remove-left">
+                            <img data-src="{{site.baseurl}}/{{post.url_thumbnail}}" width="150px" alt="" uk-img>
+                        </div>
+                        <div class="uk-width-expand" style="background-image: linear-gradient(to left, transparent,  #010101), url({{site.baseurl}}/{{post.url_banner}});">
+                            <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> {{post.categories[0]}}</h6>
+                            <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">{{post.title}} <span class="uk-text-lowercase uk-text-meta"><span uk-icon="icon: triangle-right; ratio: 1.25;"></span> {{post.title_sub}}</span></h4>
+                            <h6 class="uk-text-bold sd-text-green uk-text-uppercase uk-margin-right uk-margin-remove-top">Written by {{post.author}} on {{ post.date | date: "%-d %B %Y" }}</h6>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+    <div class="uk-margin-medium-top uk-margin-medium-bottom uk-text-center">
+    {% if paginator.total_pages > 1 %}
+        <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}">&laquo;</a>
+        {% else %}
+            <span>&laquo;</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                <span class="webjeda">{{page}}</span>
+            {% elsif page == 1 %}
+                <a href="{{ '/news' | relative_url }}">{{page}}</a>
+            {% else %}
+                <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{page}}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}">&raquo;</a>
+        {% else %}
+            <span>&raquo;</span>
+        {% endif %}
+        </div>
+    {% endif %}
+    </div>
+</div>
