@@ -21,7 +21,7 @@
 title: Stardust Collective
 email: developer@stardustcollective.dev
 description: "" # this means to ignore newlines until "baseurl:"
-baseurl: "/starudst-collective" # the subpath of your site, e.g. /blog
+baseurl: "/stardust-collective" # the subpath of your site, e.g. /blog
 url: "https://www.stardustcollective.dev" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: StardustDevs
 
