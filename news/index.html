@@ -21,7 +21,7 @@ layout: default
                     <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> {{announcement.categories[0]}}</h6>
                     <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">{{announcement.title}} 
                         {% if announcement.title_sub %}
-                        <span class="uk-text-lowercase uk-text-meta uk-visible@m"><span uk-icon="icon: triangle-right; ratio: 1.25;"></span> {{announcement.title_sub}}</span>
+                        <span class="uk-text-uppercase uk-text-meta uk-visible@m"><span uk-icon="icon: triangle-right; ratio: 1.25;"></span> {{announcement.title_sub}}</span>
                         {% endif %}
                     </h4>
                     <h6 class="uk-text-bold sd-text-green uk-text-uppercase uk-margin-right uk-margin-remove-top">Written by {{announcement.author}} on {{ announcement.date | date: "%-d %B %Y" }}</h6>
@@ -43,7 +43,7 @@ layout: default
                     <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> {{devlog.categories[0]}}</h6>
                     <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">{{devlog.title}} <span class="uk-text-lowercase uk-text-meta">
                         {% if devlog.title_sub %}
-                        <span class="uk-text-lowercase uk-text-meta uk-visible@m"><span uk-icon="icon: triangle-right; ratio: 1.25;"></span> {{devlog.title_sub}}</span>
+                        <span class="uk-text-uppercase uk-text-meta uk-visible@m"><span uk-icon="icon: triangle-right; ratio: 1.25;"></span> {{devlog.title_sub}}</span>
                         {% endif %}
                     </h4>
                     <h6 class="uk-text-bold sd-text-green uk-text-uppercase uk-margin-right uk-margin-remove-top">Written by {{devlog.author}} on {{ devlog.date | date: "%-d %B %Y" }}</h6>
@@ -69,7 +69,7 @@ layout: default
                             <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> {{post.categories[0]}}</h6>
                             <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">{{post.title}} <span class="uk-text-lowercase uk-text-meta">
                                 {% if post.title_sub %}
-                                <span class="uk-text-lowercase uk-text-meta uk-visible@m"><span uk-icon="icon: triangle-right; ratio: 1.25;"></span> {{post.title_sub}}</span>
+                                <span class="uk-text-uppercase uk-text-meta uk-visible@m"><span uk-icon="icon: triangle-right; ratio: 1.25;"></span> {{post.title_sub}}</span>
                                 {% endif %}
                             </h4>
                             <h6 class="uk-text-bold sd-text-green uk-text-uppercase uk-margin-right uk-margin-remove-top">Written by {{post.author}} on {{ post.date | date: "%-d %B %Y" }}</h6>
