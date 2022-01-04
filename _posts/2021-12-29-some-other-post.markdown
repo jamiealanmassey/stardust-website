@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Some kind of devlog"
-title_sub: "The fest with the best!"
+title: "Yet Another older post"
+title_sub: "Yes, this is a post"
 author: "Jamie Massey"
-date: 2021-12-30 01:00:25 +0000
-url_thumbnail: "assets/img/thumbs/thumb-ziggy-01.png"
-url_banner: "assets/img/banner/banner-01.png"
+date: 2021-12-27 01:00:25 +0000
+url_thumbnail: "assets/img/thumbs/thumb-steam-01.png"
+url_banner: "assets/img/banner/banner-03.png"
 categories: devlog
 ---
 

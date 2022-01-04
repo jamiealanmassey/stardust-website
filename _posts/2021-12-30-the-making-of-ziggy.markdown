@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "UPCOMING: Steam Next Fest (February 2022)"
-title_sub: "The fest with the best!"
+title: "The making of Ziggy"
 author: "Jamie Massey"
-date: 2021-12-29 01:00:25 +0000
-url_thumbnail: "assets/img/thumbs/thumb-steam-01.png"
-url_banner: "assets/img/banner/banner-02.png"
-categories: announcements
+date: 2021-12-30 01:00:25 +0000
+url_thumbnail: "assets/img/thumbs/thumb-ziggy-01.png"
+url_banner: "assets/img/banner/banner-01.png"
+categories: devlog
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
