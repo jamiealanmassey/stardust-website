@@ -12,6 +12,10 @@ html {
     text-shadow: 2px 2px 2px #20202079;
 }
 
+.sd-text-oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
 .sd-text-white,
 .sd-text-white:hover { 
     color: #F1F1F1; 
