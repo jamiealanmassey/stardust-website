@@ -39,7 +39,7 @@ document.getElementById("video-container").style.height = video_parent_height;
 <div class="uk-container">
     <!--<h2 class="uk-text-uppercase uk-text-bold uk-text-muted uk-padding sd-spacing" uk-scrollspy="cls:uk-animation-slide-top">Fresh From The Blog</h2>-->
     <div class="uk-child-width-expand@l uk-margin-auto" uk-grid>
-        {% assign announcement = site.categories.announcements[0] %}
+        {% assign announcement = site.categories.announcements.last %}
         {% if announcement %}
         <a class="uk-margin-remove sd-underline-none sd-panel-container" href="{{site.baseurl}}{{announcement.url}}">
             <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
@@ -56,7 +56,7 @@ document.getElementById("video-container").style.height = video_parent_height;
         </a>
         {% endif %}
 
-        {% assign devlog = site.categories.devlog[0] %}
+        {% assign devlog = site.categories.devlog.last %}
         {% if devlog %}
         <a class="uk-margin-remove sd-underline-none sd-panel-container" href="{{site.baseurl}}{{devlog.url}}">
             <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
