@@ -1,184 +1,200 @@
----
-permalink: /index.html
-layout: default
----
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Page Settings -->
+        <title>Stardust Collective</title>
 
-<div class="uk-background-cover uk-background-fixed uk-height-large" style="background-image: url({{site.baseurl}}/assets/img/banner/banner-02.png); filter: blur(30%);"></div>
-<div class="uk-background-image" style="background-image: linear-gradient(transparent, #F1F1F1), url({{site.baseurl}}/assets/img/tile/ziggy-tile.png);" id="video-container">
-    <div class="uk-container sd-offset-video" uk-height-match=".sd-video-main">
-        <video class="uk-align-center uk-width-1-1 sd-video-main sd-outline sd-shadow-sm" style="filter: brightness(70%);" src="{{site.baseurl}}/assets/video/demo-gameplay.mp4" autoplay loop muted playsinline uk-video></video>
-        <div class="uk-overlay uk-position-center">
-            <div class="uk-flex uk-flex-center uk-flex-middle">
-                <img class="uk-width-2-3 uk-width-1-2@m uk-margin" data-src="{{site.baseurl}}/assets/img/ziggy-logo.png" alt="" uk-img>
-            </div>
-        </div>
-        <div class="uk-overlay uk-position-bottom uk-width-1-1 uk-animation-fade">
-            <div class="uk-flex uk-flex-center uk-flex-middle uk-padding">
-                <a class="uk-button sd-button uk-width-1-6@l uk-width-1-5@m uk-width-1-4@s uk-width-1-1" href="https://store.steampowered.com/app/1501820/Ziggys_Cosmic_Adventures/">
-                    <img class="uk-animation-slide-bottom" data-src="{{site.baseurl}}/assets/img/storefront-steam.svg" alt="" uk-img>
-                </a>
-                <a class="uk-button sd-button uk-width-1-6@l uk-width-1-5@m uk-width-1-4@s uk-width-1-1" href="https://www.oculus.com/experiences/quest/">
-                    <img class="uk-animation-slide-bottom" data-src="{{site.baseurl}}/assets/img/storefront-meta.svg" alt="" uk-img>
-                </a>
-                <a class="uk-button sd-button uk-width-1-6@l uk-width-1-5@m uk-width-1-4@s uk-width-1-1" href="https://www.viveport.com/">
-                    <img class="uk-animation-slide-bottom" data-src="{{site.baseurl}}/assets/img/storefront-viveport.svg" alt="" uk-img>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+        <!-- Meta Specifiers -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script>
-var video_element = document.getElementsByClassName("sd-video-main")[0],
-    video_element_height = video_element.offsetHeight,
-    video_parent_height = ( video_element_height * 0.6 ) + "px";
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="./external/css/uikit.min.css" />
+        <link rel="stylesheet" href="./dist/css/stardust.css" />
 
-document.getElementById("video-container").style.height = video_parent_height;
-</script>
+        <!-- UIkit JS -->
+        <script src="./external/js/uikit.min.js"></script>
+        <script src="./external/js/uikit-icons.min.js"></script>
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-<div class="uk-container">
-    <!--<h2 class="uk-text-uppercase uk-text-bold uk-text-muted uk-padding sd-spacing" uk-scrollspy="cls:uk-animation-slide-top">Fresh From The Blog</h2>-->
-    <div class="uk-child-width-expand@l uk-margin-auto" uk-grid>
-        {% assign announcement = site.categories.announcements.last %}
-        {% if announcement %}
-        <a class="uk-margin-remove sd-underline-none sd-panel-container" href="{{site.baseurl}}{{announcement.url}}">
-            <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
-                <div class="uk-margin" uk-grid>
-                    <div class="uk-width-auto uk-height-small uk-padding-remove-left">
-                        <img data-src="{{site.baseurl}}/{{announcement.url_thumbnail}}" width="150px" alt="" uk-img>
+        <!-- Favicon Setup -->
+        <link rel="apple-touch-icon" sizes="180x180" href="media/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="media/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="media/img//favicon/favicon-16x16.png">
+        <link rel="manifest" href="media/img//favicon/site.webmanifest">
+        <link rel="image_src" href="media/img//stardust-logo-thumb-black.png" />
+        <link rel="canonical" href="https://www.stardustcollective.dev/" />
+    </head>
+    <body class="uk-animation-fade">
+
+        <!-- Header Navbar -->
+        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent uk-dark;">
+            <nav class="uk-navbar-container">
+                <div class="uk-container">
+                    <div uk-navbar class="sd-navbar">
+
+                        <div class="uk-navbar-center">
+                            <div class="uk-navbar-center-left uk-visible@s">
+                                <ul class="uk-navbar-nav">
+                                    <!-- About Link -->
+                                    <li class="uk-animation-fade"><a class="" href="index.html#about" uk-scroll>About</a></li>
+                                    <!-- Merch Link -->
+                                    <li class="uk-animation-fade"><a class="" href="index.html#games" uk-scroll>Games</a></li>
+                                </ul>
+                            </div>
+
+                            <a class="uk-navbar-item uk-logo uk-animation-slide-top" href="index.html">
+                                <img src="media/img/stardust_logo_full_workplace.png" style="max-height: 7vh; padding: 8px;" alt="">
+                            </a>
+                            
+                            <div class="uk-navbar-center-right uk-visible@s">
+                                <ul class="uk-navbar-nav">
+                                    <!-- Support Link -->
+                                    <li class="uk-animation-fade"><a class="" href="support.html">Support</a></li>
+                                    <!-- Contact Link -->
+                                    <li class="uk-animation-fade"><a class="" href="mailto:developer@stardustcollective.dev">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="uk-navbar-left uk-hidden@s">
+                            <a href="#" class="uk-navbar-toggle " uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+                        </div>
                     </div>
-                    <div class="uk-width-expand" style="background-image: linear-gradient(to left, transparent,  #010101), url({{site.baseurl}}/{{post.url_banner}});">
-                        <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> {{announcement.categories[0]}}</h6>
-                        <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">{{announcement.title}}</span></h4>
+                    
+                </div>
+            </nav>
+        </div>
+
+        <!-- Sidebar Nav : Mobile + Small Screens -->
+        <div id="sidenav" uk-offcanvas="flip: false" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+                <p class="uk-heading-divider uk-text-bold uk-text-uppercase">Stardust Collective</p>
+                <ul class="uk-nav">
+                     <!-- About Link -->
+                     <li class="uk-animation-fade"><a class="" href="index.html#about" uk-scroll>About</a></li>
+                     <!-- Merch Link -->
+                     <li class="uk-animation-fade"><a class="" href="index.html#games" uk-scroll>Games</a></li>
+                      <!-- Support Link -->
+                      <li class="uk-animation-fade"><a class="" href="support.html">Support</a></li>
+                      <!-- Contact Link -->
+                      <li class="uk-animation-fade"><a class="" href="mailto:developer@stardustcollective.dev">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="uk-container-expand uk-padding">
+            <div class="uk-inline uk-flex uk-flex-center" style="max-height: 85vh;">
+                <video class="uk-object-cover uk-width-expand uk-border-rounded" src="media/video/teaser-trailer.mp4" autoplay loop muted playsinline uk-video="autoplay: inview"></video>
+
+                <div class="uk-overlay uk-position-bottom uk-text-center uk-flex uk-flex-center uk-animation-slide-bottom-small">
+                    <a href="index.html#ziggy" uk-scroll>
+                        <img src="media/img/ziggy-logo.png" style="max-width: 25vw; padding: 8px;" alt="">
+                    </a>
+                </div>
+
+                <div class="uk-overlay uk-position-top uk-visible@m">
+                    <a href="https://www.oculus.com/experiences/quest/">
+                        <img class="uk-padding-small sd-scale" src="media/img/storefront-meta.png" style="max-width:8vw;" alt="">
+                    </a>
+                    <a href="https://s.team/a/1501820/">
+                        <img class="uk-padding-small sd-scale" src="media/img/storefront-steam.png" style="max-width:8vw;" alt="">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="uk-container uk-margin-large" id="about">
+
+            <div uk-grid class="sd-spacer-50 uk-grid-divider" uk-parallax="opacity:0,1,1; end:50vh + 50%;">
+                <div class="uk-width-1-2@m uk-text-right">
+                    <div uk-parallax="x:-10vw,0; opacity:0,1,1; end:50vh + 50%;">
+                        <h1 class="uk-heading-medium uk-heading-divider uk-text-uppercase uk-text-bold sd-header">Who are we?</h1>
+                        <p class="uk-text-large uk-text-justify">
+                            A collective of passionate individuals that have joined forces to create unique and interesting experiences -- the team discovered each other during the 2021 GMTK GameJam where they 
+                            developed the first version of Ziggy's Cosmic Adventures and after decided to take to the VR space!
+                        </p>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@m uk-text-left">
+                    <div uk-parallax="x:10vw,0; opacity:0,1,1; end:50vh + 50%;">
+                        <h1 class="uk-heading-medium uk-heading-divider uk-text-uppercase uk-text-bold sd-header">Our Values</h1>
+                        <p class="uk-text-large uk-text-justify">
+                            <dl class="uk-description-list">
+                                <dt>Fun</dt>
+                                <dd>We want to create unique experiences that are memorable and a blast to play!</dd>
+                                <dt>Quality</dt>
+                                <dd>We believe the games that we create should aspire to a high standard of visuals and gameplay</dd>
+                                <dt>Affordability</dt>
+                                <dd>Although we aim for high quality games we want as many people to be able to play them as possible</dd>
+                            </dl>
+                    </div>
+                </div>
+                <!--<div class="uk-width-1-2@m">
+                    <img class="uk-border-rounded" src="media/img/i69_cover.jpg" />
+                </div>-->
+            </div>
+
+            <div class="sd-spacer-50" id="games">
+                <div uk-parallax="y:-5vh,0; opacity:0,1,1; end:50vh + 50%;">
+                    <h1 class="uk-heading-medium uk-heading-divider uk-text-uppercase uk-text-bold uk-text-center sd-header sd-spacer-25">Our Games</h1>
+                </div>
+                <div uk-parallax="scale:0,1; opacity:0,1,1; end:50vh + 50%;">
+                    <a class="sd-spacer-25" href="https://s.team/a/1501820/" id="ziggy">
+                        <img class="uk-border-rounded sd-scale" src="media/img/CoverImage_Landscape.png" />
+                    </a>
+                </div>
+                <div uk-parallax="y:5vh,0; opacity:0,1,1; end:50vh + 50%;">
+                    <h3 class="uk-text-center uk-text-bold uk-text-uppercase sd-header sd-spacer-25">
+                        Wishlist now on 
+                        <a class="uk-text-decoration-none sd-green" href="https://s.team/a/1501820/">Steam</a> 
+                        <!--and the 
+                        <a class="uk-text-decoration-none sd-green" href="#">Meta Quest Store</a>-->!
+                    </h3>
+                    <img class="uk-padding uk-align-center" style="max-height: 15vh;" src="media/img/Sticker-ZiggyKnife.png" />
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="uk-background-muted">
+            <div class="uk-container uk-padding-large">
+                <div class="uk-child-width-expand@s uk-text-center uk-grid-divider" uk-grid uk-parallax="y:15vh,0; opacity:0,1,1; ">
+                    <div class="uk-text-left">
+                        <img class="uk-flex uk-flex-left" src="./media/img/stardust-logo-full-black.png" style="max-height: 4vh;" />
+                        <dl class="uk-description-list">
+                            <dt>Contact Us</dt>
+                            <dd>developer@stardustcollective.dev</dd>
+                        </dl>
+                        <h6 class="uk-text-uppercase uk-text-bold">&copy; 2021-2023. All Rights Reserved.</h6>
+                    </div>
+                    <div class="uk-text-left">
+                        <h2 class="uk-text-uppercase uk-text-bold uk-shadow-small sd-green">Socials</h2>
+                        <ul class="uk-list">
+                            <li><h5 class=""><a class="uk-text-decoration-none sd-green" href="https://discord.gg/7gUT4aPbb7">Discord</a></h4></li>
+                            <li><h5 class=""><a class="uk-text-decoration-none sd-green" href="https://www.youtube.com/channel/UC_WogbnxK0bIugUutLMI-Jg">YouTube</a></h4></li>
+                            <li><h5 class=""><a class="uk-text-decoration-none sd-green" href="https://www.tiktok.com/@alexclarkegames">TikTok</a></h4></li>
+                            <li><h5 class=""><a class="uk-text-decoration-none sd-green" href="https://www.twitter.com/StardustDevs">Twitter</a></h5></li>
+                            <li><h5 class=""><a class="uk-text-decoration-none sd-green" href="https://www.twitch.tv/stardust_collective">Twitch</a></h5></li>
+                        </ul>
+                    </div>
+                    <div class="uk-text-left">
+                        <h2 class="uk-text-uppercase uk-text-bold uk-text-primary uk-shadow-small sd-green">Support</h2>
+                        <ul class="uk-list">
+                            <li><h5><a class="uk-text-decoration-none sd-green" href="privacy-policy.html">Privacy Policy</a></h4></li>
+                            <li><h5><a class="uk-text-decoration-none sd-green" href="mailto:developer@stardustcollective.dev">Contact Us</a></h4></li>
+                            <!--<li><h5><a class="uk-text-decoration-none sd-green" href="terms-of-service.html">Terms of Service</a></h5></li>-->
+                        </ul>
                     </div>
                 </div>
             </div>
-        </a>
-        {% endif %}
-
-        {% assign devlog = site.categories.devlog.last %}
-        {% if devlog %}
-        <a class="uk-margin-remove sd-underline-none sd-panel-container" href="{{site.baseurl}}{{devlog.url}}">
-            <div class="sd-outline sd-panel sd-shadow-sm" uk-scrollspy="cls:uk-animation-fade">
-                <div class="uk-margin" uk-grid>
-                    <div class="uk-width-auto uk-height-small uk-padding-remove-left">
-                        <img data-src="{{site.baseurl}}/{{devlog.url_thumbnail}}" width="150px" alt="" uk-img>
-                    </div>
-                    <div class="uk-width-expand" style="background-image: linear-gradient(to left, transparent,  #010101), url({{site.baseurl}}/{{post.url_banner}});">
-                        <h6 class="uk-width-expand uk-margin-top uk-text-uppercase uk-text-bold uk-text-meta"><span uk-icon="minus"></span> {{devlog.categories[0]}}</h6>
-                        <h4 class="uk-text-bold sd-text-white uk-text-uppercase uk-margin-right uk-margin-remove-top">{{devlog.title}}</span></h4>
-                    </div>
-                </div>
-            </div>
-        </a>
-        {% endif %}
-    </div>
-</div>
-
-
-<div class="uk-container uk-margin" uk-scrollspy="cls:uk-animation-fade">
-    <div class="uk-padding uk-margin-medium-left uk-margin-medium-right sd-background-1 uk-text-meta sd-outline sd-shadow-sm">
-        <h1 class="uk-text-bold uk-text-uppercase sd-text-green"><span uk-icon="icon: minus; ratio: 2"></span> Ziggy's Cosmic Adventures</h1>
-        <div class="uk-margin uk-padding-bottom">
-            <p>Ziggy's Cosmic Adventures is a built-for-VR cockpit game that combines ship management and action-arcade combat.</p>
-            <p><i>"Maybe stealing an alien research subject with unquantifiable power, a subject that is owned by an evil galactic empire, wasn't the best idea, so what? And yes, it perhaps isn't ideal to have agents from said empire chasing you through a solar system, trying to skin you alive for your outrageous acts, right? But it doesn't really matter at all, because we have to look at the bigger picture here, there is a ton of money to be made in selling off rare organic life!"</i></p>
-            <p>It's time to explore the galaxy with your stolen extra-terrestrial friend Ziggy and trusty Personal Artificial Lifeform (P.A.L) companion. Along the way you will meet friendly and hostile individuals as you attempt to escape unscathed from the galactic empire!</p>
-
-            <h6 class="uk-text-bold uk-text-uppercase sd-text-white">Exciting VR Space Combat</h6>
-            <p>Engage in exciting VR space combat. Dodge asteroids and space debris as you navigate the solar system. Destroy enemies with your ship's weapons, manage your shields to reflect their blasts, and survive! You can also do barrel rolls!</p>
-    
-            <h6 class="uk-text-bold uk-text-uppercase sd-text-white">Fully Immersive Cockpit</h6>
-            <p>In your room-scale cockpit, all of the ship's systems are at an arms reach and fully interactive. Switch on your lights, power your shields, balance your temperature and pressure, fix hull breaches, fuel your life module, and stabilise the ship.</p>
-        
-            <h6 class="uk-text-bold uk-text-uppercase sd-text-white">Branching Story Paths</h6>
-            <p>Each playthrough of the game will take you through a unique path in the solar system, with a unique story for each path you take.</p>
-    
-            <h6 class="uk-text-bold uk-text-uppercase sd-text-white">And Much More</h6>
-            <ul class="uk-margin-bottom">
-                <li>Layered Complexity: Every level has a different set of challenges that you must overcome and will require you to utilise the systems in your ship differently.</li>
-                <li>Galactic Leaderboards: Challenge your friends and the world stage at large in time trials and high scores.</li>
-                <li>Completionist Rewards: Earn trophies that you can proudly display inside of your ship and use them to change cosmetics around you, including cosmetics for Ziggy.</li>
-            </ul>
         </div>
 
-        <hr class="uk-divider-icon">
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push; autoplay: true;">
-
-            <ul class="uk-slideshow-items sd-rounded-1">
-                <li><img src="https://cdn.akamai.steamstatic.com/steam/apps/1501820/ss_904c6a87b69e880e24e690c33e2cc6e7c61892f9.1920x1080.jpg?t=1638306440" alt="" uk-cover></li>
-                <li><img src="https://cdn.akamai.steamstatic.com/steam/apps/1501820/ss_2fe47e19e6c9b340c55966f80d21d3c0121ce9e2.1920x1080.jpg?t=1638306440" alt="" uk-cover></li>
-                <li><img src="https://cdn.akamai.steamstatic.com/steam/apps/1501820/ss_1e5bb5396726a6a4fae3fd1f198e9a0bcd1fb1c5.1920x1080.jpg?t=1638306440" alt="" uk-cover></li>
-                <li><img src="https://cdn.akamai.steamstatic.com/steam/apps/1501820/ss_bd38155da3f3b845dfa88a043de926ab653800c6.1920x1080.jpg?t=1638306440" alt="" uk-cover></li>
-                <li><img src="https://cdn.akamai.steamstatic.com/steam/apps/1501820/ss_8d4dc3c91ceadfcd3cc4c6115bd6d85b60334aa2.1920x1080.jpg?t=1638306440" alt="" uk-cover></li>
-                <li><img src="https://cdn.akamai.steamstatic.com/steam/apps/1501820/ss_3cdf83b8862a78c24911ffbc050b5447216cd617.1920x1080.jpg?t=1638306440" alt="" uk-cover></li>
-                <li><img src="https://cdn.akamai.steamstatic.com/steam/apps/1501820/ss_115714d192d9134357241e5a10417b04b1a296ef.1920x1080.jpg?t=1638306440" alt="" uk-cover></li>
-            </ul>
-
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-
-            <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-        </div>
-    </div>
-</div>
-
-
-<div id="about"></div>
-<div class="uk-container uk-margin" uk-scrollspy="cls:uk-animation-fade">
-    <div class="uk-padding uk-margin-medium-left uk-margin-medium-right sd-background-1 uk-text-meta sd-outline sd-shadow-sm">
-        <h1 class="uk-text-bold uk-text-uppercase sd-text-green"><span uk-icon="icon: minus; ratio: 2"></span> About Us</h1>
-        <p class="">Ziggy's Cosmic Adventures started life as an entry to the GMTK Game Jam 2020 and was forged into this world in a mere 48 hours. Although the game was initially developed as a flat non-VR experience the team saw the potential it 
-            has as a fully fledged VR game with immersive interactions. After the end of the voting period Ziggy placed 54th out of the 5477 games submitted!</p>
-        <p class="">Development for the VR version of our game started from an almost clean slate with many more features planned in this version. We intend to take this game much further and would like you to join us for the ride!</p>
-    </div>
-</div>
-
-
-<div id="newsletter"></div>
-<div class="uk-container uk-margin" uk-scrollspy="cls:uk-animation-fade">
-    <div class="uk-padding uk-margin-medium-left uk-margin-medium-right sd-background-1 uk-text-meta sd-outline sd-shadow-sm">
-        <h1 class="uk-text-bold uk-text-uppercase sd-text-green"><span uk-icon="icon: minus; ratio: 2"></span> Newsletter Signup</h1>
-        <p class="uk-margin uk-padding uk-padding-remove-bottom">Keep up to date with all things Stardust Collective! <span uk-icon="icon: minus;"></span> Be the first to know about announcements for Ziggy's Cosmic Adventures and get ahead of the curve with exclusive access to content (and any other games we make) before anyone else!</p>
-    
-        <!-- Begin Mailchimp Signup Form -->
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-        <div id="mc_embed_signup" class="uk-padding">
-            <form action="https://space.us7.list-manage.com/subscribe/post?u=84b4acd179576e0a947a7c942&amp;id=757684cfaa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate uk-padding-remove" target="_blank">
-                <div id="mc_embed_signup_scroll">
-                    <div class="mc-field-group uk-width-1-1">
-                        <label class="uk-legend uk-margin-bottom sd-text-white" for="mce-FNAME">Full Name (Optional) </label>
-                        <input class="uk-input uk-width-1-1 uk-form-width-large" id="mce-FNAME" name="FNAME" value="" type="text" placeholder="John Doe">
-                    </div>
-                    <div class="mc-field-group uk-width-1-1">
-                        <label class="uk-legend uk-margin-bottom sd-text-white" for="mce-EMAIL">Email Address (Required) <span class="asterisk">*</span></label>
-                        <input class="uk-input uk-width-1-1 uk-form-width-large required email" id="mce-EMAIL" name="EMAIL" value="" type="email" placeholder="john.doe@awesome.domain">
-                    </div>
-                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                    <div id="mce-responses" class="">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_84b4acd179576e0a947a7c942_757684cfaa" tabindex="-1" value=""></div>
-                    <input type="submit" value="SUBSCRIBE TO NEWSLETTER" name="subscribe" id="mc-embedded-subscribe" class="uk-button uk-button-default uk-margin uk-margin-remove-left uk-text-uppercase sd-text-white">
-                </div>
-            </form>
-        </div>
-        <!--End mc_embed_signup-->
-    </div>
-</div>
-
-
-<div id="contact"></div>
-<div class="uk-container uk-margin" uk-scrollspy="cls:uk-animation-fade">
-    <div class="uk-padding uk-margin-medium-left uk-margin-medium-right sd-background-1 uk-text-meta sd-outline sd-shadow-sm">
-        <h1 class="uk-text-bold uk-text-uppercase sd-text-green"><span uk-icon="icon: minus; ratio: 2"></span> Contact Us</h1>
-        <h3 class="uk-margin sd-text-white uk-text-uppercase uk-text-center">Questions and support requests may be directed to the company email (<a href="mailto:developer@stardustcollective.dev">developer@stardustcollective.dev</a>)</h3>
-    </div>
-</div>
-
-
-<div class="uk-height-small" style="background-image: linear-gradient(#F1F1F1, transparent), url({{site.baseurl}}/assets/img/tile/ziggy-tile.png);"></div>
-
-<a href="#" uk-scroll class="uk-flex uk-flex-center">
-    <span uk-icon="icon: triangle-up;ratio: 3" style="color: #010101;"></span>
-</a>
+    </body>
+</html>

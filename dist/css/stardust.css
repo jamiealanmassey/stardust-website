@@ -1,0 +1,30 @@
+html, 
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.sd-header {
+    letter-spacing: 5px;
+}
+
+.sd-spacer-25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.sd-spacer-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+    .sd-green       { color: #55c118 !important; }
+a > .sd-green:hover { color: #73f02b !important; }
+
+.sd-scale { transition: all .3s ease-in-out; }
+.sd-scale:hover { transform: scale(0.96); }
+
+.sd-navbar { 
+    min-height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

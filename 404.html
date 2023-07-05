@@ -1,12 +1,99 @@
----
-permalink: /404.html
-layout: default
----
+<!DOCTYPE html>
+<head>
+    <!-- Page Settings -->
+    <title>Stardust Collective</title>
 
-<div uk-height-viewport="expand: true; offset-top: true;" class="uk-background-image" style="background-image: linear-gradient(transparent, #F1F1F1), url({{site.baseurl}}/assets/img/tile/ziggy-tile.png);">
-    <div class="uk-position-center uk-text-center uk-padding uk-margin">
-        <img class="uk-padding-small" data-src="{{site.baseurl}}/assets/img/ziggy-nod.gif" width="200px" height="20px" alt="" uk-img>
-        <h1 class="uk-text-bold">404</h1>
-        <p>The requested page could not be found.</p>
+    <!-- Meta Specifiers -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="./external/css/uikit.min.css" />
+    <link rel="stylesheet" href="./dist/css/stardust.css" />
+
+    <!-- UIkit JS -->
+    <script src="./external/js/uikit.min.js"></script>
+    <script src="./external/js/uikit-icons.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon Setup -->
+    <link rel="apple-touch-icon" sizes="180x180" href="media/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/img//favicon/favicon-16x16.png">
+    <link rel="manifest" href="media/img//favicon/site.webmanifest">
+    <link rel="image_src" href="media/img//stardust-logo-thumb-black.png" />
+    <link rel="canonical" href="https://www.stardustcollective.dev/" />
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent uk-dark;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+                <div uk-navbar class="sd-navbar">
+
+                    <div class="uk-navbar-center">
+                        <div class="uk-navbar-center-left uk-visible@s">
+                            <ul class="uk-navbar-nav">
+                                <!-- About Link -->
+                                <li class="uk-animation-fade"><a class="" href="index.html#about" uk-scroll>About</a></li>
+                                <!-- Merch Link -->
+                                <li class="uk-animation-fade"><a class="" href="index.html#games" uk-scroll>Games</a></li>
+                            </ul>
+                        </div>
+
+                        <a class="uk-navbar-item uk-logo uk-animation-slide-top" href="index.html">
+                            <img src="media/img/stardust_logo_full_workplace.png" style="max-height: 7vh; padding: 8px;" alt="">
+                        </a>
+                        
+                        <div class="uk-navbar-center-right uk-visible@s">
+                            <ul class="uk-navbar-nav">
+                                <!-- Support Link -->
+                                <li class="uk-animation-fade"><a class="" href="support.html">Support</a></li>
+                                <!-- Contact Link -->
+                                <li class="uk-animation-fade"><a class="" href="mailto:developer@stardustcollective.dev">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="uk-navbar-left uk-hidden@s">
+                        <a href="#" class="uk-navbar-toggle " uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
     </div>
-</div>
+
+    <!-- Sidebar Nav : Mobile + Small Screens -->
+    <div id="sidenav" uk-offcanvas="flip: false" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+            <p class="uk-heading-divider uk-text-bold uk-text-uppercase">Stardust Collective</p>
+            <ul class="uk-nav">
+                 <!-- About Link -->
+                 <li class="uk-animation-fade"><a class="" href="index.html#about" uk-scroll>About</a></li>
+                 <!-- Merch Link -->
+                 <li class="uk-animation-fade"><a class="" href="index.html#games" uk-scroll>Games</a></li>
+                  <!-- Support Link -->
+                  <li class="uk-animation-fade"><a class="" href="support.html">Support</a></li>
+                  <!-- Contact Link -->
+                  <li class="uk-animation-fade"><a class="" href="mailto:developer@stardustcollective.dev">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="uk-container">
+        <div class="uk-text-center sd-spacer-50">
+            <img class="uk-padding" src="./media/img/Sticker-ZiggyConfused.png" style="max-height: 30vh;" />
+            <h3 class="uk-heading-small uk-text-uppercase uk-text-bold sd-header">What in the stardust?!<br> That's not meant to happen!</h3>
+            <h1 class="uk-heading-large uk-text-uppercase uk-text-bold">
+                <a class="uk-text-decoration-none sd-green sd-scale" href="index.html">FLY HOME</a>
+            </h1>
+        </div>
+    </div>
+    
+</body>
