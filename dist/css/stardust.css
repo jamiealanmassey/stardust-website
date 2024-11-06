@@ -17,6 +17,14 @@ body {
     padding-bottom: 50px;
 }
 
+.sd-spacer-b-25 {
+    padding-bottom: 25px;
+}
+
+.sd-spacer-b-50 {
+    padding-bottom: 50px;
+}
+
     .sd-green       { color: #55c118 !important; }
 a > .sd-green:hover { color: #73f02b !important; }
 
