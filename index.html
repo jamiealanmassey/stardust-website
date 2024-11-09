@@ -67,11 +67,20 @@
                             </div>
                         </div>
 
+                        <div class="uk-navbar-right uk-visible@m">
+                            <a href="index.html#ziggy-giveaway" class="uk-button uk-button-default uk-button-small uk-padding-small uk-border-rounded">
+                                <h5 class="uk-margin-remove uk-flex uk-flex-middle">
+                                    <span class="uk-margin-auto-vertical uk-margin-small-right uk-text-light">Ziggy Giveaway</span>
+                                    <span uk-icon="icon: bag; ratio: 1.2"></span>
+                                </h5>
+                            </a>
+                        </div>
+
                         <div class="uk-navbar-left uk-hidden@s">
                             <a href="#" class="uk-navbar-toggle " uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
                         </div>
                     </div>
-                    
+
                 </div>
             </nav>
         </div>
@@ -90,6 +99,12 @@
                       <!-- Contact Link -->
                       <li class="uk-animation-fade"><a class="" href="mailto:developer@stardustcollective.dev">Contact</a></li>
                 </ul>
+                <a href="index.html#ziggy-giveaway" class="uk-padding-small">
+                    <h5 class="uk-margin-remove uk-flex uk-flex-middle">
+                        <span class="uk-margin-auto-vertical uk-margin-small-right uk-text-light">Ziggy Giveaway</span>
+                        <span uk-icon="icon: bag; ratio: 1.2"></span>
+                    </h5>
+                </a>
             </div>
         </div>
 
@@ -164,7 +179,16 @@
                     </h3>
                     <img class="uk-padding uk-align-center" style="max-height: 15vh;" src="media/img/Sticker-ZiggyKnife.png" />
                 </div>
-                
+            </div>
+
+            <div id ="ziggy-giveaway">
+                <div uk-parallax="y:-5vh,0; opacity:0,1,1; end:50vh + 50%;">
+                    <h1 class="uk-heading-medium uk-heading-divider uk-text-uppercase uk-text-bold uk-text-center sd-header sd-spacer-25">Ziggy Giveaway</h1>
+                </div>
+                <a class="e-widget" href="https://gleam.io/EDIha/ziggys-cosmic-adventure-giveaway" rel="nofollow">
+                    Ziggy's Cosmic Adventure Giveaway!
+                </a>
+                <script type="text/javascript" src="https://widget.gleamjs.io/e.js" async="true"></script>
             </div>
 
         </div>
@@ -200,6 +224,15 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- This is the modal -->
+        <div id="giveaway-modal" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title"></h2>
+                
+                <button class="uk-modal-close" type="button"></button>
             </div>
         </div>
 
